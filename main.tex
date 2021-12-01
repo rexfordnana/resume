@@ -1,0 +1,225 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0.10pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Rexford}{Aboagye}{ 
+\href{mailto:rexfordnana@gmail.com}{rexfordnana@gmail.com} | 240.756.3189
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t][18cm]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Delaware State University}
+\descript{MS in Computer Science}
+\descript{Machine Learning / Data Analytics}
+\location{December 2016 | Dover, DE}
+\sectionsep
+
+\subsection{University of Ghana}
+\descript{BS in Computer Science}
+\descript{BA in Economics}
+\location{June 2011 | Accra, Ghana}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+Github:// \href{https://github.com/rexfordnana}{\bf rexfordnana} \\
+LinkedIn://  \href{https://www.linkedin.com/in/rexfordnana}{\bf rexfordnana} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Areas of Study}
+Machine Learning \& Data Analytics \\
+Networks \& Distributed Systems \\
+Pattern Recognition \\
+Database Systems \\
+IOT \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Production:}
+NodeJS \textbullet{} Python \\
+JAVA \textbullet{} Bash \\
+ SQL \textbf{•} CypherShell \\
+\location{Familiar:}
+C \textbullet{} PHP \\
+C++ \textbullet{} \LaTeX\
+\sectionsep
+
+\subsection{Software}
+\location{Infrastructure and Deployment:}
+AWS \textbullet{} ConcourseCI \textbullet{} Neo4J \\
+Jenkins \textbullet{} MongoDB\\
+\location{Other:}
+Git \textbullet{} Ansible \\
+Terraform
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t][18cm]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Comcast}
+\descript{| Software Engineer }
+\location{February 2019 – Present | Philadelphia, PA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed and built an integration solution between GraphQL API and a REST that helped streamline the internal process of partner creation in NodeJS using serverless.
+\item Designed and implemented a subscription based notification system using a serverless architecture and python that increased downstream clients data consistency by 99\%
+\item Created smart alerts on internal applications that gave the team operational visibility into all running systems.
+\item Contributed to CRUD API creation in both NodeJS (Express) and Java (SpringBoot)
+\item Automated the deployment of code infrastructure using Terraform and Terragrunt
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Barclays US}
+\descript{| Software Engineer }
+\location{February 2017 – February 2019 | Wilmington, DE}
+
+\begin{tightemize}
+\item Development of REST APIs that interact with Legacy SOAP services and returns JSON format data to ReactJS library using SpringBoot(JAVA).
+\item Creation of REST API and Microservices automation framework using REST assured libraries and Karate IO.
+\item Configuring Dockerfiles to create immutable virtual images for easy deployments.
+\item Maintain GIT branches during project development. Conducting merges and use MAVEN for building and deploying application to APAAS( Cloud Environment)
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{United Nations}
+\descript{| Java Developer }
+\location{Jan 2016 – Dec 2016 | New York, NY}
+\begin{tightemize}
+\item Designed and develop a full stack application to search archives and telephone notes of the UN Secretary General.
+\item Involvement in all phases of Software Development life cycle including maintenance and support 
+\item Creation of CICD pipeline for individual MCA's(Multi Channel Application) using GOCD.
+\item  Creation of a friendly web User Interface for Admin users to easily review OCR'd archives in Python
+\item Performing data validation on SQL server
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Embassy Of Ghana}
+\descript{| Software Engineer}
+\location{September 2013 – January 2016 | Washington, DC}
+\begin{tightemize}
+\item Primarily a data, backend engineer. Managed an
+intern, conducted interviews, and involved in recruiting.
+\item Responsible for understanding agency requirements for various projects by interacting with different team members.
+\item Developed a Django web portal for visa applications and passport renewal forms
+\item Monitoring Application logs in Kibana and Openshift.
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
